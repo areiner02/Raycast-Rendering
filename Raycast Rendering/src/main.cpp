@@ -46,10 +46,10 @@ struct Map
 
 struct ColorPalette
 {
-	const static Uint32 wall		= 0x777777;
+	const static Uint32 wall	= 0x777777;
 	const static Uint32 darkWall	= 0x707070;
-	const static Uint32 floor		= 0x202020;
-	const static Uint32 ceiling		= 0x161616;
+	const static Uint32 floor	= 0x202020;
+	const static Uint32 ceiling	= 0x161616;
 };
 
 int main(int argc, char* argv[])
@@ -229,9 +229,9 @@ int main(int argc, char* argv[])
 						int drawEnd		= height / 2 + WALL_HEIGHT / 2 + PITCH;
 						for (int y = 0; y < SCREEN_HEIGHT - 1; y++)
 						{
-							if (y < drawStart)					SCREEN_BUFFER[y][x] = ColorPalette::ceiling;
+							if (y < drawStart)			SCREEN_BUFFER[y][x] = ColorPalette::ceiling;
 							if (y >= drawStart && y < drawEnd)	SCREEN_BUFFER[y][x] = hitSide ? ColorPalette::wall : ColorPalette::darkWall;
-							if (y >= drawEnd)					SCREEN_BUFFER[y][x] = ColorPalette::floor;
+							if (y >= drawEnd)			SCREEN_BUFFER[y][x] = ColorPalette::floor;
 						}
 					}
 				}
